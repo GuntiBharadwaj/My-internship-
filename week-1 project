@@ -1,0 +1,41 @@
+l=[]
+m=[]
+c=0
+while(c!=6):
+  print ("enter your choice")
+  print("1.add task")
+  print("2.display task")
+  print("3.marking completed task")
+  print("4.update task")
+  print("5.remove task")
+  print("6.quit")
+  c=int(input("enter choice:"))
+  if c==1:
+    description=input("enter task:")
+    l.append(description )
+    d_date=input("enter due date ad dd-mm-year:")
+    l.append(d_date)
+    priority=input("enter Priority as low,medium,high:");
+    l.append(priority)
+  if c==2:
+    if len(l)==0:
+      print(m)
+    else:
+      print(l)
+  if c==3:
+    print("task completed")
+    l.extend(m)
+    l.clear()
+  if c==4:
+    m.clear()
+    print("update description:")
+    des=input()
+    l[0]=des
+    print("update due date:")
+    date=input()
+    l[1]=date
+    print("update priority:")
+    prior=input()
+    l[2]=prior
+  if c==5:
+    l.clear()                
